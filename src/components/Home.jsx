@@ -14,8 +14,8 @@ const Home = () => {
   const createPaste = () => {
     // add details of the paste to an object
     const paste = {
-      title,
-      content,
+      title: title,
+      content: content,
       _id: pasteId || Date.now().toString(36), // used for Short unique strings (e.g., unique IDs,)
       createdAt: new Date().toISOString(),
     };

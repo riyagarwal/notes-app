@@ -20,5 +20,9 @@ Routing:-
 Local storage is like a mini database in the browser.
 But it only accepts strings, not objects or arrays.
 
+input type=search -
+- adds search icon in the keyboard on phones
+- X icon in Chrome and Safari
+
 
 
