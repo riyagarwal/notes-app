@@ -1,0 +1,24 @@
+Paste App features:-
+Create
+View/ Read
+Update
+Delete
+Share
+Search
+Copy
+
+Tools and tech used:-
+Local Storage - instead of backend DB
+Tailwind CSS- for styling
+Redux - to manage state
+
+Routing:-
+/ -> home page - creation and updation
+/pastes -> lists all pastes
+/pastes/:id -> view pastes
+
+Local storage is like a mini database in the browser.
+But it only accepts strings, not objects or arrays.
+
+
+
