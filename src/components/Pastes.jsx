@@ -43,15 +43,15 @@ const Pastes = () => {
             // card container
             <div
               key={paste?._id}
-              className="border rounded-md p-5 flex flex-row gap-6 place-content-between"
+              className="border rounded-md p-5 flex flex-row gap-2 place-content-between h-54"
             >
               {/* title and content*/}
-              <div className="flex-1 flex-col gap-4">
-                <h2 className="text-left text-2xl">{paste.title}</h2>
-                <p className="text-left">{paste.content}</p>
+              <div className="flex flex-1 flex-col gap-6 ">
+                <h2 className="text-left text-3xl">{paste.title}</h2>
+                <p className="text-left overflow-hidden text-ellipsis">{paste.content}</p>
               </div>
               {/* buttons and date */}
-              <div className="flex flex-col">
+              <div className="flex flex-col ">
                 <div className="flex flex-row gap-2 mb-4 flex-wrap">
                   {/* Edit button */}
                   <button>
@@ -157,11 +157,11 @@ const Pastes = () => {
                     </svg>
                   </button>
                 </div>
-                <div>
+                <div className="text-right">
                   {new Date(paste.createdAt).toLocaleString("default", {
                     year: "numeric",
                     month: "long",
-                    day: "numeric"
+                    day: "numeric",
                   })}
                 </div>
               </div>
