@@ -21,7 +21,7 @@ const Pastes = () => {
   };
 
   return (
-    <>
+    <div className="">
       <div className="flex flex-row gap-7 place-content-between">
         {/* search bar */}
         <input
@@ -43,16 +43,16 @@ const Pastes = () => {
             // card container
             <div
               key={paste?._id}
-              className="border rounded-md p-5 flex flex-row place-content-between"
+              className="border rounded-md p-5 flex flex-row gap-6 place-content-between"
             >
               {/* title and content*/}
-              <div className="flex flex-col gap-4">
+              <div className="flex-1 flex-col gap-4">
                 <h2 className="text-left text-2xl">{paste.title}</h2>
                 <p className="text-left">{paste.content}</p>
               </div>
               {/* buttons and date */}
               <div className="flex flex-col">
-                <div className="flex flex-row gap-2 mb-4">
+                <div className="flex flex-row gap-2 mb-4 flex-wrap">
                   {/* Edit button */}
                   <button>
                     <Link to={`/?pasteId=${paste?._id}`}>
@@ -157,13 +157,19 @@ const Pastes = () => {
                     </svg>
                   </button>
                 </div>
-                <div>{paste.createdAt.split("T")[0]}</div>
+                <div>
+                  {new Date(paste.createdAt).toLocaleString("default", {
+                    year: "numeric",
+                    month: "long",
+                    day: "numeric"
+                  })}
+                </div>
               </div>
             </div>
           ))}
       </div>
-    </>
+    </div>
   );
-};
+}; //.split("T")[0]
 
 export default Pastes;
