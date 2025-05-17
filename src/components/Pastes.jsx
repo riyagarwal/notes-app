@@ -59,7 +59,7 @@ const Pastes = () => {
                   </button>
 
                   <button>
-                    <Link to={`/pastes/${paste._id}`}>View</Link>
+                    <Link to={`/pastes/${paste?._id}`}>View</Link>
                   </button>
 
                   <button onClick={() => handleDelete(paste._id)}>

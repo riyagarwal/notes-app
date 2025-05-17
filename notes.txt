@@ -24,5 +24,8 @@ input type=search -
 - adds search icon in the keyboard on phones
 - X icon in Chrome and Safari
 
+.filter returns an array of matching items from array
+.find returns the 1st matching element
+
 
 
